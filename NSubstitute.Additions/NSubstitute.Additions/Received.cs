@@ -11,6 +11,7 @@ public static class Received
         return new ReceivedForSubstitutes(substitutes);
     }
 
+    // TODO: ForMentioned should remove all known substitutes 
     public static ReceivedForSubstitutes ForMentioned()
     {
         return new ReceivedForSubstitutes([]);
@@ -18,10 +19,6 @@ public static class Received
 
     public sealed class ReceivedForSubstitutes(object[] substitutes)
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="calls"></param>
         public void NoOtherThan(Action calls)
         {
             var query = new GetAllCallsQuery(SubstitutionContext.Current.CallSpecificationFactory);

@@ -13,6 +13,7 @@ public class ReceivedNoOtherCallsTests
     public void Pass_when_verifying_a_single_call()
     {
         _foo.Start();
+
         Received.For(_foo).NoOtherThan(() => _foo.Start());
     }
 
@@ -21,6 +22,7 @@ public class ReceivedNoOtherCallsTests
     {
         _foo.Start();
         _bar.Begin();
+
         Received.For(_foo).NoOtherThan(() => _foo.Start());
     }
 
