@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="NSubstitute.Additions\NSubstitute.Additions.csproj" Type="Classic C#" />
+  <Project Path="TestProject\TestProject.csproj" Type="Classic C#" />
+</Solution>
